@@ -22,12 +22,14 @@ int main() {
             scanf("%d", &arr[i]);
         }
     }
-    int avg = 0;
+    float avg = 0;
     for(int i=0;i<n;i++) {
-        avg+=arr[i];
+        if (arr[i] %2 == 0) {
+            avg+=arr[i];
+        };
     }
     avg = avg/n;
-    printf("The average is: %d", avg);
+    printf("The average is: %.2f", avg);
     free(arr);
     return 0;
 }
